@@ -13,6 +13,10 @@ import java.util.Map;
 public class WordFrequency {
     public static Map<String, Integer> countWords(String[] words) {
         Map<String, Integer> counts = new HashMap<>();
+        for (String word : words) {
+            counts.put(word, counts.getOrDefault(word, 0) + 1);
+        }
+
         
         // TODO: Implement the counting logic and return the populated map.
         
